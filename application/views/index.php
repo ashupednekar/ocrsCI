@@ -155,7 +155,7 @@ body, html {
               </div>
               <div class="form-group">
                   <label for="exampleInputPassword1">Type</label>
-                  <input type="password" class="form-control" name="type" id="'type" placeholder="Type">
+                  <input type="text" class="form-control" name="type" id="'type" placeholder="Type">
               </div>
               <div class="form-group">
                   <label for="exampleInputPassword1">Address</label>
