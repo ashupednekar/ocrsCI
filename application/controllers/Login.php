@@ -37,7 +37,16 @@ class Login extends CI_Controller
                 $data['user'] = $r;
                 $this->load->view('complainant_log',$data);
             }else if($r->type == 'Forensics'){
+                $this->load->database();
+                $o = $r->officer_id;
+                $data['cases'] = $this->db->get_where('case', array('officer'=>$o))->result_array();
+                $l = $this->db->where(array('severity'=>'low'))->from("case")->count_all_results();
+                $m = $this->db->where(array('severity'=>'medium'))->from("case")->count_all_results();
+                $h = $this->db->where(array('severity'=>'high'))->from("case")->count_all_results();
                 $data['user'] = $r;
+                $data['l'] = $l;
+                $data['m'] = $m;
+                $data['h'] = $h;
                 $this->load->view('forensics_log',$data);
             }
         }

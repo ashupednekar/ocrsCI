@@ -22,12 +22,12 @@ body, html {height: 100%}
       <a href="http://127.0.0.1:8000" style="text-decoration: none">Home</a>
   </div>
   <div class="w3-display-middle">
-    <center><h1 class="w3-jumbo w3-animate-top">Welcome {{ data1.complainant_name }}</h1></center>
+    <center><h1 class="w3-jumbo w3-animate-top">Welcome <?= $case->name?></h1></center>
     <hr class="w3-border-grey" style="margin:auto;width:40%">
     <p class="w3-large w3-center"><center><h3>Your FIR has been successfully submitted.</h3></center></p>
   </div>
   <div class="w3-display-bottomleft w3-padding-large">
-    Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+    OCRS <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">Project</a>
   </div>
 </div>
 
